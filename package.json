@@ -1,0 +1,57 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "Express v4 boilerplate with mongoose crud",
+  "main": "src/index.js",
+  "keywords": [
+    "node",
+    "node.js",
+    "mongo",
+    "mongodb",
+    "2018",
+    "express",
+    "boilerplate",
+    "mongoose",
+    "crud"
+  ],
+  "author": "Alejandro Martinez de Velasco",
+  "license": "MIT",
+  "engines": {
+    "node": "8.6.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint src/**",
+    "lint-fix": "eslint --fix src/**",
+    "lint-tests": "eslint test/**",
+    "test": "jest",
+    "coverage": "jest --coverage test",
+    "nsp": "nsp check"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**.js",
+      "!src/index.js",
+      "!src/config.js",
+      "!src/service/logger.service.js",
+      "!src/service/s3.service.js"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "dotenv": "6.0.0",
+    "express": "4.16.3",
+    "mongoose": "5.2.6",
+    "morgan": "1.9.0",
+    "winston": "3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.18.0",
+    "jest": "^23.4.2",
+    "nsp": "^3.2.1",
+    "supertest": "^3.1.0"
+  }
+}
