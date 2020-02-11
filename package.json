@@ -1,7 +1,7 @@
 {
   "name": "express-boilerplate",
   "version": "1.0.0",
-  "description": "Express v4 boilerplate with mongoose crud",
+  "description": "Express v4 boilerplate with mongoose CRUD",
   "main": "src/index.js",
   "keywords": [
     "node",
@@ -26,15 +26,16 @@
     "lint-tests": "eslint test/**",
     "test": "jest",
     "coverage": "jest --coverage test",
-    "nsp": "nsp check"
+    "nsp": "nsp check",
+    "doc:clean": "rimraf ./documentation",
+    "doc": "npm run doc:clean && mkdir ./documentation && raml2html raml/api.raml > ./documentation/index.html"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**.js",
       "!src/index.js",
-      "!src/config.js",
-      "!src/service/logger.service.js",
-      "!src/service/s3.service.js"
+      "!src/config/**",
+      "!src/services/**"
     ]
   },
   "dependencies": {

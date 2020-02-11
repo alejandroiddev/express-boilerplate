@@ -2,47 +2,50 @@
 
 CRUD Book with the following stack:
 
-//TODO TBD
-
-| **Tech** | **Description** |**Learn More**|
-|----------|-------|---|
-|  [React](https://facebook.github.io/react/)  |   Fast, composable client-side components.    | [Pluralsight Course](https://www.pluralsight.com/courses/react-flux-building-applications)  |
-|  [Redux](http://redux.js.org) |  Enforces unidirectional data flows and immutable, hot reloadable store. Supports time-travel debugging. Lean alternative to [Facebook's Flux](https://facebook.github.io/flux/docs/overview.html).| [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux), [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux), [Pluralsight Course](http://www.pluralsight.com/courses/react-redux-react-router-es6)|
-|  [React Router](https://github.com/reactjs/react-router) | A complete routing library for React | [Pluralsight Course](https://www.pluralsight.com/courses/react-flux-building-applications) |
-|  [Babel](http://babeljs.io) |  Compiles ES6 to ES5. Enjoy the new version of JavaScript today.     | [ES6 REPL](https://babeljs.io/repl/), [ES6 vs ES5](http://es6-features.org), [ES6 Katas](http://es6katas.org), [Pluralsight course](https://www.pluralsight.com/courses/javascript-fundamentals-es6)    |
-| [Webpack](https://webpack.js.org) | Bundles npm packages and our JS into a single file. Includes hot reloading via [react-transform-hmr](https://www.npmjs.com/package/react-transform-hmr). | [Quick Webpack How-to](https://github.com/petehunt/webpack-howto) [Pluralsight Course](https://www.pluralsight.com/courses/webpack-fundamentals)|
-| [Browsersync](https://www.browsersync.io/) | Lightweight development HTTP server that supports synchronized testing and debugging on multiple devices. | [Intro vid](https://www.youtube.com/watch?time_continue=1&v=heNWfzc7ufQ)|
-| [Jest](https://facebook.github.io/jest/) | Automated tests with built-in expect assertions and [Enzyme](https://github.com/airbnb/enzyme) for DOM testing without a browser using Node. | [Pluralsight Course](https://www.pluralsight.com/courses/testing-javascript) |
-| [TrackJS](https://trackjs.com/) | JavaScript error tracking. | [Free trial](https://my.trackjs.com/signup)|  
-| [ESLint](http://eslint.org/)| Lint JS. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. | |
-| [SASS](http://sass-lang.com/) | Compiled CSS styles with variables, functions, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
-| [PostCSS](https://github.com/postcss/postcss) | Transform styles with JS plugins. Used to autoprefix CSS |
-| [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
-| [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
+| **Tech** | **Description** |
+|----------|-------|
+|[Node](https://nodejs.org/)                          | JavaScript runtime built on Chrome's V8 JavaScript engine. |
+|[Exoress](https://expressjs.com/)                    | Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications..| 
+|[Mongoose](http://redux.js.org)                      | Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.| 
+|[Morgan](https://github.com/expressjs/morgan)        | HTTP request logger middleware for node.js | 
+|[Winston](https://github.com/winstonjs/winston)      | A logger for just about everything. |
+|[dotenv](https://github.com/motdotla/dotenv)         | Zero-dependency module that loads environment variables from a .env file into [process.env](https://nodejs.org/docs/latest/api/process.html#process_process_env). | 
+|[Jest](https://facebook.github.io/jest/)             | Automated tests with built-in expect assertions and [Enzyme](https://github.com/airbnb/enzyme) for DOM testing without a browser using Node. | 
+|[Supertest](https://github.com/visionmedia/supertest)| [Super-agent](https://github.com/visionmedia/superagent) driven library for testing node.js HTTP servers using a fluent API | 
+|[ESLint](http://eslint.org/)                         | Lint JS. Reports syntax and style issues. Using [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) for additional Jest specific linting rules. | |
+|[npm Scripts](https://docs.npmjs.com/misc/scripts)   | Glues all this together in a handy automated build. | 
 
 ## Requirements 
 * Node.js v8.x or later
 * NPM (or YARN)
 * MongoDB
+* Create `.env` file in `/` with following properties
+```
+SERVER_PORT=9001
+LOG_LEVEL=debug
+```
 
 ## Configuration / setup & run / Get started
-> tbd
 
 ```sh
 # clone repository
 $ git clone repositoryurl
-$ cd projectname
+$ cd express-boilerplate
 
 # install dependencies
 $ npm install
 
 # start the server
-$ npm run dev
+$ npm run start
 ```
 
 ## Usage
 
-(al tasks found in package, including raml to see how it works)
+You can run `$ npm run doc` to create documentation, it can be found in `/documentation`
+
+## Testing
+
+To test application run `$ npm run test` or check coverage with `$ npm run coverage`
 
 ## Docker
 Try it with docker!
@@ -56,6 +59,15 @@ docker run --rm -p 9000:9000 \
 express-boilerplate:1
 ```
 
+## To Do
+
+* Testing
+* Documenting
+* Dockerizing
+* Mock services depending on environment (create one that need this behaviour)
+* response service
+* validations with joi
+
 ## Contributing
 I'd love to have your helping hand on `express-boilerplate`! so feel free to ask for support, or 
 make pull requests.
@@ -65,6 +77,5 @@ This Boilerplate is open source software [licensed as MIT](https://github.com/mi
 
 ## Contact
 
-> GitHub [@migithub](https://github.com/migithub/)
-
+> GitHub [@alejandroiddev](https://github.com/alejandroiddev)
 

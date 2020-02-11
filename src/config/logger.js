@@ -1,11 +1,11 @@
-const { transports, createLogger } = require('winston');
+const winston = require('winston');
 const config = require('./config');
 
 const level = config.logLevel;
 
-const logger = createLogger({
+const logger = winston.createLogger({
   transports: [
-    new transports.Console({
+    new winston.transports.Console({
       level,
       colorize: true,
       timestamp() {

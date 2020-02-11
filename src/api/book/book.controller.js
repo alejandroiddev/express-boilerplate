@@ -1,9 +1,19 @@
-/* eslint-disable no-unused-vars */
+const bookService = require('./book.service');
+const log = require('../../config/logger');
+
 module.exports = {
   createBook: async (req, res) => {
-    console.log('createBook');
-    res.send('respond with a resource');
+    try {
+      // todo: validate request (woops it is already validated by mongoose!
+      const resultBook = await bookService.createBook(req.body);
+      res.status(201).send(resultBook); // todo: model book to dto
+    } catch (e) {
+      console.log(e);
+      log.error(e);
+      res.status(401).send({ errors: e.errors });
+    }
   },
+  /*
   editBook: async (req, res) => {
     // just an example of maybe updating the user
     req.user.name = req.params.name;
@@ -26,5 +36,5 @@ module.exports = {
   },
   deleteBook: async (req, res, next) => {
     next(new Error('not implemented'));
-  },
+  },*/
 };
